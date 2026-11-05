@@ -1,0 +1,327 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QUOTEX AI FUTURE</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Animated Background -->
+    <div class="background">
+        <div class="glow glow-one"></div>
+        <div class="glow glow-two"></div>
+        <div class="glow glow-three"></div>
+    </div>
+
+    <!-- LOGIN PAGE -->
+    <section id="login-page" class="login-page">
+
+        <div class="login-card">
+
+            <div class="logo">
+                <span>Q</span>
+            </div>
+
+            <h1>QUOTEX AI FUTURE</h1>
+
+            <p class="login-subtitle">
+                Intelligent Signal Generator
+            </p>
+
+            <form id="login-form">
+
+                <div class="input-group">
+                    <label>Email Address</label>
+                    <input
+                        type="email"
+                        id="email"
+                        placeholder="Enter your email"
+                        required
+                    >
+                </div>
+
+                <div class="input-group">
+                    <label>Password</label>
+                    <input
+                        type="password"
+                        id="password"
+                        placeholder="Enter your password"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="primary-btn">
+                    Access Dashboard
+                </button>
+
+            </form>
+
+            <p class="login-footer">
+                Secure Demo Environment
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MAIN DASHBOARD -->
+    <main id="dashboard" class="dashboard hidden">
+
+        <!-- HEADER -->
+        <header class="topbar">
+
+            <div class="brand">
+                <div class="brand-logo">Q</div>
+
+                <div>
+                    <h2>QUOTEX AI FUTURE</h2>
+                    <span>Signal Generator</span>
+                </div>
+            </div>
+
+            <div class="header-actions">
+
+                <div class="timezone">
+                    🇧🇩 UTC+06:00
+                </div>
+
+                <button id="logout-btn" class="logout-btn">
+                    Logout
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- WELCOME -->
+        <section class="welcome-section">
+
+            <div>
+                <p class="eyebrow">WELCOME TO YOUR TERMINAL</p>
+
+                <h1>
+                    Generate Your
+                    <span>Future Signals.</span>
+                </h1>
+
+                <p class="welcome-text">
+                    Select your preferred assets and generate
+                    demo trading signals.
+                </p>
+            </div>
+
+            <div class="status-card">
+                <span class="status-dot"></span>
+                DEMO SYSTEM ONLINE
+            </div>
+
+        </section>
+
+
+        <!-- STATISTICS -->
+        <section class="stats-grid">
+
+            <div class="stat-card">
+                <span class="stat-label">Total Signals</span>
+                <h2 id="total-signals">00</h2>
+                <span class="stat-note">Generated signals</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Selected Assets</span>
+                <h2 id="selected-count">00</h2>
+                <span class="stat-note">Active selection</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Trade Duration</span>
+                <h2>M1</h2>
+                <span class="stat-note">1 minute expiry</span>
+            </div>
+
+            <div class="stat-card">
+                <span class="stat-label">Timezone</span>
+                <h2>UTC+6</h2>
+                <span class="stat-note">Bangladesh Standard Time</span>
+            </div>
+
+        </section>
+
+
+        <!-- SIGNAL GENERATOR -->
+        <section class="main-panel">
+
+            <div class="panel-heading">
+
+                <div>
+                    <p class="eyebrow">SIGNAL CONFIGURATION</p>
+                    <h2>Signal Generator</h2>
+                </div>
+
+                <span class="demo-badge">DEMO MODE</span>
+
+            </div>
+
+
+            <!-- CATEGORY -->
+            <div class="category-tabs">
+
+                <button class="category-btn active" data-category="currency">
+                    Currency
+                </button>
+
+                <button class="category-btn" data-category="crypto">
+                    Crypto
+                </button>
+
+                <button class="category-btn" data-category="commodities">
+                    Commodities
+                </button>
+
+            </div>
+
+
+            <!-- ASSET SEARCH -->
+            <div class="asset-search">
+
+                <input
+                    type="text"
+                    id="asset-search"
+                    placeholder="Search assets..."
+                >
+
+            </div>
+
+
+            <!-- ASSET LIST -->
+            <div id="asset-list" class="asset-list">
+
+                <!-- Assets will appear here -->
+
+            </div>
+
+
+            <!-- GENERATOR SETTINGS -->
+            <div class="generator-settings">
+
+                <div class="setting-box">
+
+                    <label>Signal Count</label>
+
+                    <select id="signal-count">
+                        <option value="10">10 Signals</option>
+                        <option value="20" selected>20 Signals</option>
+                        <option value="25">25 Signals</option>
+                        <option value="30">30 Signals</option>
+                    </select>
+
+                </div>
+
+
+                <div class="setting-box">
+
+                    <label>Generation Window</label>
+
+                    <select id="time-window">
+                        <option value="30">30 Minutes</option>
+                        <option value="60" selected>60 Minutes</option>
+                    </select>
+
+                </div>
+
+            </div>
+
+
+            <!-- GENERATE BUTTON -->
+            <button id="generate-btn" class="primary-btn generate-btn">
+
+                <span>✦</span>
+                Generate Signals
+
+            </button>
+
+
+            <!-- SIGNAL OUTPUT -->
+            <div class="signal-output">
+
+                <div class="output-heading">
+
+                    <div>
+                        <p class="eyebrow">GENERATED RESULTS</p>
+                        <h2>Signal List</h2>
+                    </div>
+
+                    <button id="copy-all-btn" class="copy-btn">
+                        Copy All
+                    </button>
+
+                </div>
+
+
+                <div id="signal-list" class="signal-list">
+
+                    <div class="empty-state">
+                        <div class="empty-icon">✦</div>
+
+                        <h3>No Signals Generated</h3>
+
+                        <p>
+                            Select assets and generate your first demo signal.
+                        </p>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+        <footer class="footer">
+
+            <div>
+                <h3>QUOTEX AI FUTURE</h3>
+                <p>Demo signal generation platform.</p>
+            </div>
+
+            <div class="footer-links">
+
+                <a
+                    href="https://t.me/traderrifatFx"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Join Community
+                </a>
+
+                <a
+                    href="https://t.me/Trader_rifat_132"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    Contact Support
+                </a>
+
+            </div>
+
+        </footer>
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+    <script src="app.js"></script>
+
+</body>
+</html>
